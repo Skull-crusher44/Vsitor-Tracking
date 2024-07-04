@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Tivotal</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Additional CSS for table border */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Center align the text in the table header */
+    th:first-child {
+      text-align: left;
+    }
+
+    /* Style ticks and crosses */
+    .tick {
+      color: green;
+    }
+
+    .cross {
+      color: red;
+    }
+
+    .tick, .cross {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <section class="sidebar">
+    <a href="#" class="logo">
+      <i class="fab fa-slack"></i>
+      <span class="text">Admin Panel</span>
+    </a>
+
+    <ul class="side-menu top">
+      <li class="active">
+        <a href="#" class="nav-link">
+          <i class="fas fa-border-all"></i>
+          <span class="text">Visitor report</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          <i class="fas fa-message"></i>
+          <span class="text">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          <i class="fas fa-people-group"></i>
+          <span class="text">Households and Cattle Analytics</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="side-menu">
+      <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="logout">
+          <i class="fas fa-right-from-bracket"></i>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content">
+    <nav>
+      <i class="fas fa-bars menu-btn"></i>
+      <a href="#" class="nav-link"></a>
+      <form action="#">
+        <div class="form-input">
+          <input type="search" placeholder="search visitor" />
+          <button class="search-btn">
+            <i class="fas fa-search search-icon"></i>
+          </button>
+        </div>
+      </form>
+
+      <input type="checkbox" hidden id="switch-mode" />
+      <label for="switch-mode" class="switch-mode"></label>
+
+      <a href="#" class="notification">
+        <i class="fas fa-bell"></i>
+        <span class="num">28</span>
+      </a>
+
+      <a href="#" class="profile">
+        <img src="profile.jpg" alt="" />
+      </a>
+    </nav>
+
+    <main>
+      <div class="head-title">
+        <h2>Villages and Days of the Month</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name of Village</th>
+              <!-- Generate columns for days 1 to 31 -->
+              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
+              <th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th>
+              <th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th>
+              <th>19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th>
+              <th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Paliwadi</td>
+              <!-- Example data for each day, replace as needed -->
+              <td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td>
+            </tr>
+            <tr>
+              <td>Viajenaath</td>
+              <!-- Example data for each day, replace as needed -->
+              <td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td>
+              <td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+            </tr>
+            <tr>
+              <td>Kadavwadi</td>
+              <!-- Example data for each day, replace as needed -->
+              <td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td>
+              <td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td>
+              <td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td><td><span class="cross">X</span></td>
+            </tr>
+            <!-- Add more rows as needed for other villages -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </section>
+
+  <script src="apps.js"></script>
+</body>
+</html>

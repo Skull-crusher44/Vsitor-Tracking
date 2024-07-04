@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Cattle</title>
+</head>
+<body>
+  <h1>Add New Cattle</h1>
+  <form id="addCattleForm">
+    <label for="id">Cattle ID:</label>
+    <input type="text" id="id" name="cattleId" required><br><br>
+    <label for="parentId">Parent ID:</label>
+    <input type="text" id="parentId" name="parentId" required><br><br>
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender" required><br><br>
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" required><br><br>
+    <label for="dateOfVisit">Date of Visit:</label>
+    <input type="date" id="dateOfVisit" name="dateOfVisit" required><br><br>
+    <label for="vaccinationDate">Due Vaccination Date:</label>
+    <input type="date" id="vaccinationDate" name="vaccinationDate" required><br><br>
+    <label for="weight">Weight:</label>
+    <input type="text" id="weight" name="weight" required><br><br>
+    <label for="status">Status:</label>
+    <select id="status" name="status" required>
+      <option value="healthy">Healthy</option>
+      <option value="unhealthy">Unhealthy</option>
+      <option value="vaccine-due">Vaccine Due</option>
+      <option value="died">Died</option>
+    </select><br><br>
+    <label for="symptoms">Symptoms:</label>
+    <textarea id="symptoms" name="symptoms" rows="4" cols="50"></textarea><br><br>
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+    <button type="submit">Add Cattle</button>
+  </form>
+  <script src="addcattle.js"></script>
+</body>
+</html>
